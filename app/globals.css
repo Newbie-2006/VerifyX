@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-[#f2f2f7] text-[#1d1d1f];
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/65 backdrop-blur-xl border border-white/40 shadow-[0_10px_30px_rgba(0,0,0,0.05)];
+  }
+  
+  .glass-dark {
+    @apply bg-black/5 backdrop-blur-xl border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.05)];
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
+  }
+
+  .risk-high { color: #ff3b30; }
+  .risk-med { color: #ffcc00; }
+  .risk-low { color: #34c759; }
+  .accent { color: #007aff; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
